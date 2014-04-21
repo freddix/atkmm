@@ -2,12 +2,12 @@
 
 Summary:	A C++ interface to ATK
 Name:		atkmm
-Version:	2.22.6
-Release:	2
+Version:	2.22.7
+Release:	1
 License:	LGPL
 Group:		X11/Libraries
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/atkmm/2.22/%{name}-%{version}.tar.bz2
-# Source0-md5:	7c35324dd3c081a385deb7523ed6f287
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/atkmm/2.22/%{name}-%{version}.tar.xz
+# Source0-md5:	fec7db3fc47ba2e0c95d130ec865a236
 URL:		http://gtkmm.sourceforge.net/
 BuildRequires:	atk-devel
 BuildRequires:	autoconf
@@ -58,6 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install	\
 	DESTDIR=$RPM_BUILD_ROOT	\
 	libdocdir=%{_gtkdocdir}/atkmm-1.6
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT

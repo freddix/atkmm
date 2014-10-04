@@ -3,7 +3,7 @@
 Summary:	A C++ interface to ATK
 Name:		atkmm
 Version:	2.22.7
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/Libraries
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/atkmm/2.22/%{name}-%{version}.tar.xz
